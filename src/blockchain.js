@@ -25,7 +25,23 @@ class Blockchain{
     createTransaction(transaction){
         this.pendingTransactions.push(transaction);
     }
-    
+
+    getBalance(address){
+        let balance = 0;
+        for(const block of this.chain){
+            for(const tx of block.transactions){
+                if(tx.fromAddress === address){
+                    balance -= tx.amount;
+                }
+
+                if(tx.toAddress === address){
+                    balance += tx.amount;
+                }
+            }
+        }
+        return balance;
+    }
+
     getLatestBlock(){
         return this.chain[this.chain.length-1];
     }
