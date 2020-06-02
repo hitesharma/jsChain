@@ -20,6 +20,16 @@ class Block{
         }
         console.log(this.hash);
     }
+
+    verifyTransactions(){
+        for(const tx of this.transactions){
+            if(!tx.validate()){
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
 
 exports.Block=Block;
