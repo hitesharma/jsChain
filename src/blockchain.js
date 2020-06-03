@@ -6,7 +6,7 @@ class Blockchain{
         this.chain=[this.genesisBlock()];
         this.difficulty=1;
         this.pendingTransactions=[];
-        this.miningReward=1; 
+        this.miningReward=50; 
     }
 
     genesisBlock(){

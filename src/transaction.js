@@ -1,4 +1,4 @@
-const sha256 = require('crypto-js/sha256');
+const crypto = require('crypto');
 const EC = require('elliptic').ec;
 const ec = new EC('secp256k1');
 
@@ -10,7 +10,7 @@ class Transaction{
     }
 
     calculateHash(){
-        return sha256(this.fromAddress + this.toAddress + this.amount).toString();
+        return crypto.createHash('sha256').update(this.fromAddress + this.toAddress + this.amount).digest('hex');
     }
 
     signTransaction(signingKey){
