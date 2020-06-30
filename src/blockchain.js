@@ -29,12 +29,12 @@ class Blockchain{
             throw new Error('Transaction should be higher than 0');
         }
 
-        if(this.getBalance(transaction.fromAddress) < transaction.amount){
-            throw new Error('Not Enough Balance');
-        }
-
         if(!transaction.fromAddress || !transaction.toAddress){
             throw new Error('Transaction must include Sender\'s and Receiver\'s address');
+        }
+        
+        if(this.getBalance(transaction.fromAddress) < transaction.amount){
+            throw new Error('Not Enough Balance');
         }
 
         if(!transaction.validate()){
