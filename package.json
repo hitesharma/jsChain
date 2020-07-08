@@ -13,13 +13,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hitesharma1/jsChain.git"
+    "url": "git+https://github.com/hitesharma/jsChain.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hitesharma1/jsChain/issues"
+    "url": "https://github.com/hitesharma/jsChain/issues"
   },
-  "homepage": "https://github.com/hitesharma1/jsChain#readme"
+  "homepage": "https://github.com/hitesharma/jsChain#readme"
 }
